@@ -9,8 +9,15 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.io.Serializable;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
+import java.util.List;
+import java.util.Locale;
 import java.util.Scanner;
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
 
 public class SomeBasics {
 
@@ -85,9 +92,20 @@ public class SomeBasics {
     //   System.out.println("Type is :"+newDog.breed);
     //   objectoutputStream.close();
     //   objectInputStream.close();
-      
-      
 
+
+
+    
+      
+    // ArrayList<String> importList = new ArrayList<String>() {
+    //     {
+    //      add("Hey there Shariq?");
+    //      add("How are you?");
+    //         //add(null);
+    //     }
+    // };
+      
+    // importList.forEach(System.out::println);
 
         } catch (Exception e) {
             System.out.println("Some Error Occurr!!"+e.getMessage());
@@ -96,6 +114,23 @@ public class SomeBasics {
     }
 }
 
+
+ class Coffee{
+    String brand;
+    String name;
+    LocalDateTime LocalDate;
+    public void setBrand(String brand){
+        this.brand=brand;
+    }
+    
+    public void setName(String name){
+        this.name=name;
+    }
+    
+    public void setTime(LocalDateTime localDateTime){
+        this.LocalDate=localDateTime;
+    }
+}
 
 class Dog implements Serializable
 
